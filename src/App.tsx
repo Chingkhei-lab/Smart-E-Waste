@@ -389,58 +389,6 @@ const WaysToEarn = ({ navigate }: { navigate: (path: string) => void }) => {
     );
 };
 
-// Simple Profile Page
-const UserProfile: React.FC = () => {
-    const { currentUser, logout } = useEwasteStore();
-    const navigate = useNavigate();
-
-    const handleLogout = () => {
-        logout();
-        navigate('/login');
-    };
-
-    return (
-        <div className="space-y-6">
-            <div className="text-center">
-                <div className="h-24 w-24 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-emerald-600">
-                        {currentUser?.name?.charAt(0)}
-                    </span>
-                </div>
-                <h1 className="text-2xl font-bold text-gray-900">{currentUser?.name}</h1>
-                <p className="text-gray-500">{currentUser?.email}</p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-sm border">
-                <div className="p-4 border-b">
-                    <h2 className="font-semibold text-gray-900">Account Stats</h2>
-                </div>
-                <div className="p-4 space-y-4">
-                    <div className="flex justify-between">
-                        <span className="text-gray-500">Total Points</span>
-                        <span className="font-medium text-gray-900">{currentUser?.points}</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span className="text-gray-500">Items Recycled</span>
-                        <span className="font-medium text-gray-900">{currentUser?.recyclingHistory.length}</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span className="text-gray-500">CO₂ Saved</span>
-                        <span className="font-medium text-gray-900">{currentUser?.co2Saved} kg</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span className="text-gray-500">Badges</span>
-                        <span className="font-medium text-gray-900">{currentUser?.badges.length}</span>
-                    </div>
-                </div>
-            </div>
-
-            <Button variant="outline" className="w-full" onClick={handleLogout}>
-                Logout
-            </Button>
-        </div>
-    );
-};
 
 // Login & Signup Page
 const LoginPage: React.FC = () => {
