@@ -74,7 +74,7 @@ const UserLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </main>
 
             {/* Bottom Navigation - Dynamic active state */}
-            <nav className="fixed bottom-0 left-0 right-0 bg-white border-t z-40">
+            <nav className="fixed bottom-0 left-0 right-0 bg-white border-t z-40 pb-[env(safe-area-inset-bottom)]">
                 <div className="flex items-center justify-around max-w-md mx-auto py-2">
                     {navItems.map((item) => {
                         const Icon = item.icon;
