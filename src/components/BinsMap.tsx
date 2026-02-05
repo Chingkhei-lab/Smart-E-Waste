@@ -429,7 +429,7 @@ export default function BinsMap() {
             {/* Map */}
             <div className={cn(
                 "relative rounded-2xl overflow-hidden border shadow-sm transition-all duration-300",
-                isNavigating ? "h-[60svh]" : isFullMap ? "h-[calc(100svh-10rem)]" : "h-64 sm:h-80"
+                isNavigating ? "h-[60svh]" : isFullMap ? "h-[70svh]" : "h-[400px] sm:h-[500px]"
             )}>
                 <MapContainer
                     center={DEFAULT_CENTER}

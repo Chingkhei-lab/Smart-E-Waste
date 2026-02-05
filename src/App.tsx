@@ -43,9 +43,9 @@ const UserLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 pb-24">
+        <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
             {/* Header */}
-            <header className="sticky top-0 z-40 bg-white border-b">
+            <header className="flex-none bg-white border-b z-40">
                 <div className="flex items-center justify-between px-4 py-3">
                     <Link to="/" className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-lg bg-emerald-500 flex items-center justify-center">
@@ -68,13 +68,15 @@ const UserLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 </div>
             </header>
 
-            {/* Main Content */}
-            <main className="p-4 lg:p-6 max-w-4xl mx-auto">
-                {children}
+            {/* Main Content - Only scrollable area */}
+            <main className="flex-1 overflow-y-auto p-4 lg:p-6 flex flex-col">
+                <div className="max-w-4xl mx-auto w-full flex-1">
+                    {children}
+                </div>
             </main>
 
-            {/* Bottom Navigation - Dynamic active state */}
-            <nav className="fixed bottom-0 left-0 right-0 bg-white border-t z-[2000] pb-[env(safe-area-inset-bottom)]">
+            {/* Bottom Navigation - Now flex-none and part of the flow */}
+            <nav className="flex-none bg-white border-t z-40 pb-[env(safe-area-inset-bottom)]">
                 <div className="flex items-center justify-around max-w-md mx-auto py-2">
                     {navItems.map((item) => {
                         const Icon = item.icon;
