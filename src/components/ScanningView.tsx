@@ -4,7 +4,7 @@ import * as tf from '@tensorflow/tfjs';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import {
     Scan, Camera, Zap, AlertTriangle, CheckCircle2,
-    Settings, Keyboard, History, Flashlight, X, Smartphone, List, Loader2
+    Settings, History, X, Smartphone, Loader2
 } from 'lucide-react';
 import { useEwasteStore } from '@/store/ewasteStore';
 import { aiClassifier } from '@/services/aiClassifier';
@@ -21,7 +21,6 @@ export default function ScanningView() {
         return localStorage.getItem('hideSafetyCheck') !== 'true';
     });
     const [flashlightOn, setFlashlightOn] = useState(false);
-    const [showManual, setShowManual] = useState(false);
     const [dontAskAgain, setDontAskAgain] = useState(false);
     const [showHistory, setShowHistory] = useState(false);
 
@@ -34,7 +33,7 @@ export default function ScanningView() {
     const setScanResult = useEwasteStore(state => state.setScanResult);
     const currentUser = useEwasteStore(state => state.currentUser);
     const navigate = useNavigate();
-    const requestRef = useRef<number>();
+
 
     // Lazy Load TensorFlow Model - only when user is ready to scan
     useEffect(() => {
@@ -87,9 +86,9 @@ export default function ScanningView() {
                     const video = webcamRef.current.video;
 
                     // Use tf.tidy to automatically dispose tensors
-                    const predictions = await tf.tidy(() => {
-                        return model.detect(video);
-                    });
+                    // Note: detect() is async, so tf.tidy won't work as expected. 
+                    // coco-ssd handles its own memory for detection.
+                    const predictions = await model.detect(video);
 
                     if (predictions.length > 0) {
                         const relevant = predictions.find(p =>
@@ -342,14 +341,7 @@ export default function ScanningView() {
                         )} />
                     </button>
 
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="text-white/80 hover:text-white hover:bg-white/10"
-                        onClick={() => setShowManual(true)}
-                    >
-                        <Keyboard className="h-6 w-6" />
-                    </Button>
+
                 </div>
             </div>
 
@@ -485,16 +477,8 @@ export default function ScanningView() {
             )}
 
             {/* Quick Actions */}
-            <div className="grid grid-cols-2 gap-4">
-                <Card className="bg-emerald-50 border-emerald-100 cursor-pointer hover:bg-emerald-100 transition-colors" onClick={() => setShowManual(true)}>
-                    <CardContent className="p-4 flex flex-col items-center text-center gap-2">
-                        <Keyboard className="h-8 w-8 text-emerald-600" />
-                        <div>
-                            <p className="font-semibold text-emerald-900">Manual Entry</p>
-                            <p className="text-xs text-emerald-700">Enter device details manually</p>
-                        </div>
-                    </CardContent>
-                </Card>
+            <div className="grid grid-cols-1 gap-4 p-4">
+
                 <Card
                     className="cursor-pointer hover:bg-gray-50 transition-colors"
                     onClick={() => setShowHistory(true)}

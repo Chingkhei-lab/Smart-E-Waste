@@ -74,7 +74,7 @@ export default function ImpactDashboard() {
     return (
         <div className="min-h-screen bg-gray-50 pb-6">
             {/* Header */}
-            <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 rounded-b-3xl shadow-lg">
+            <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-4 sm:p-6 rounded-b-3xl shadow-lg">
                 <Button
                     variant="ghost"
                     size="icon"
@@ -117,7 +117,7 @@ export default function ImpactDashboard() {
                             <TreePine className="h-5 w-5 text-emerald-600" />
                             Environmental Equivalents
                         </h2>
-                        <div className="grid grid-cols-3 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                             <div className="text-center p-3 bg-green-50 rounded-xl">
                                 <TreePine className="h-6 w-6 text-green-600 mx-auto mb-1" />
                                 <p className="text-2xl font-bold text-green-900">{treesEquivalent}</p>

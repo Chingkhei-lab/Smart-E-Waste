@@ -1,0 +1,83 @@
+src/components/AnalysisView.tsx(85,17): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/components/AnalysisView.tsx(105,21): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/components/AnalysisView.tsx(120,29): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/components/AnalysisView.tsx(215,29): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/components/AnalysisView.tsx(236,29): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/components/BinsMap.tsx(11,8): error TS2307: Cannot find module 'leaflet/dist/leaflet.css' or its corresponding type declarations.
+src/components/BinsMap.tsx(14,26): error TS2307: Cannot find module 'leaflet/dist/images/marker-icon-2x.png' or its corresponding type declarations.
+src/components/BinsMap.tsx(15,24): error TS2307: Cannot find module 'leaflet/dist/images/marker-icon.png' or its corresponding type declarations.
+src/components/BinsMap.tsx(16,26): error TS2307: Cannot find module 'leaflet/dist/images/marker-shadow.png' or its corresponding type declarations.
+src/components/ProfilePage.tsx(6,49): error TS6133: 'Bell' is declared but its value is never read.
+src/components/ProfilePage.tsx(143,25): error TS2304: Cannot find name 'toast'.
+src/components/RewardView.tsx(9,1): error TS6192: All imports in import declaration are unused.
+src/components/RewardView.tsx(139,58): error TS6133: 'currentUser' is declared but its value is never read.
+src/components/ScanningView.tsx(7,34): error TS6133: 'Flashlight' is declared but its value is never read.
+src/components/ScanningView.tsx(7,61): error TS6133: 'List' is declared but its value is never read.
+src/components/ScanningView.tsx(24,12): error TS6133: 'showManual' is declared but its value is never read.
+src/components/ScanningView.tsx(37,11): error TS6133: 'requestRef' is declared but its value is never read.
+src/components/ScanningView.tsx(37,24): error TS2554: Expected 1 arguments, but got 0.
+src/components/ScanningView.tsx(90,55): error TS2345: Argument of type '() => Promise<cocoSsd.DetectedObject[]>' is not assignable to parameter of type 'string | ScopeFn<TensorContainer>'.
+  Type '() => Promise<cocoSsd.DetectedObject[]>' is not assignable to type 'ScopeFn<TensorContainer>'.
+    Type 'Promise<DetectedObject[]>' is not assignable to type 'TensorContainer'.
+      Type 'Promise<DetectedObject[]>' is not assignable to type 'Tensor<Rank> | TensorContainerObject | TensorContainerArray | Float32Array<ArrayBufferLike> | Int32Array<...> | Uint8Array<...>'.
+        Type 'Promise<DetectedObject[]>' is not assignable to type 'TensorContainerObject'.
+          Index signature for type 'string' is missing in type 'Promise<DetectedObject[]>'.
+src/components/ScanningView.tsx(94,37): error TS2339: Property 'length' does not exist on type 'TensorContainer'.
+  Property 'length' does not exist on type 'number'.
+src/components/ScanningView.tsx(95,54): error TS2339: Property 'find' does not exist on type 'TensorContainer'.
+  Property 'find' does not exist on type 'string'.
+src/components/ScanningView.tsx(95,59): error TS7006: Parameter 'p' implicitly has an 'any' type.
+src/components/ScanningView.tsx(97,30): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'TensorContainer'.
+  Property '0' does not exist on type 'TensorContainer'.
+src/main.tsx(4,8): error TS2307: Cannot find module './index.css' or its corresponding type declarations.
+src/services/aiClassifier.ts(34,13): error TS6133: 'initialized' is declared but its value is never read.

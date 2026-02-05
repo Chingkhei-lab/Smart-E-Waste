@@ -1,0 +1,14 @@
+src/components/BinsMap.tsx(11,8): error TS2307: Cannot find module 'leaflet/dist/leaflet.css' or its corresponding type declarations.
+src/components/BinsMap.tsx(14,26): error TS2307: Cannot find module 'leaflet/dist/images/marker-icon-2x.png' or its corresponding type declarations.
+src/components/BinsMap.tsx(15,24): error TS2307: Cannot find module 'leaflet/dist/images/marker-icon.png' or its corresponding type declarations.
+src/components/BinsMap.tsx(16,26): error TS2307: Cannot find module 'leaflet/dist/images/marker-shadow.png' or its corresponding type declarations.
+src/components/ProfilePage.tsx(6,49): error TS6133: 'Bell' is declared but its value is never read.
+src/components/ProfilePage.tsx(143,25): error TS2304: Cannot find name 'toast'.
+src/components/RewardView.tsx(9,1): error TS6192: All imports in import declaration are unused.
+src/components/RewardView.tsx(139,58): error TS6133: 'currentUser' is declared but its value is never read.
+src/components/ScanningView.tsx(7,34): error TS6133: 'Flashlight' is declared but its value is never read.
+src/components/ScanningView.tsx(7,61): error TS6133: 'List' is declared but its value is never read.
+src/components/ScanningView.tsx(24,12): error TS6133: 'showManual' is declared but its value is never read.
+src/components/ScanningView.tsx(37,11): error TS6133: 'requestRef' is declared but its value is never read.
+src/components/ScanningView.tsx(37,24): error TS2554: Expected 1 arguments, but got 0.
+src/main.tsx(4,8): error TS2307: Cannot find module './index.css' or its corresponding type declarations.

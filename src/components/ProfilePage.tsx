@@ -3,8 +3,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import {
     User, LogOut, Award, Gift, CreditCard, ArrowRightLeft,
     ChevronRight, Wallet, ShoppingBag, Coffee, Smartphone,
-    Zap, Ticket, BadgeCheck, History, Settings, Bell
+    Zap, Ticket, BadgeCheck, History, Settings
 } from 'lucide-react';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';

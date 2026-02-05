@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { ClassificationResult, RecycleRecord, Badge, User, RewardData, ValueBreakdown } from '@/types/ewaste';
+import type { ClassificationResult, RecycleRecord, Badge, User, RewardData } from '@/types/ewaste';
 import { DeviceType } from '@/types/ewaste';
 import { valueEngine } from '@/services/valueEngine';
 
@@ -70,7 +70,7 @@ export const useEwasteStore = create<EwasteState>()(
                     badges: [],
                     recyclingHistory: [],
                     co2Saved: 0,
-                    favoriteCategory: 'Phone'
+                    favoriteCategory: DeviceType.SMARTPHONE
                 };
 
                 set({ currentUser: newUser });
@@ -109,7 +109,7 @@ export const useEwasteStore = create<EwasteState>()(
                     badges: [],
                     recyclingHistory: [],
                     co2Saved: 0,
-                    favoriteCategory: 'Phone'
+                    favoriteCategory: DeviceType.SMARTPHONE
                 };
 
                 set({ currentUser: user });
@@ -127,7 +127,7 @@ export const useEwasteStore = create<EwasteState>()(
                 const finalType = confirmed ? currentScan.deviceType : (manualType || currentScan.deviceType);
 
                 // Calculate value
-                const { finalValue, breakdown } = valueEngine.calculateValue(
+                const { breakdown } = valueEngine.calculateValue(
                     finalType,
                     currentScan.suggestedCategory,
                     currentScan.estimatedWeight,
@@ -161,7 +161,7 @@ export const useEwasteStore = create<EwasteState>()(
             },
 
             completeSession: () => {
-                const { pendingReward, currentUser, currentScan, currentCondition } = get();
+                const { pendingReward, currentUser, currentScan } = get();
                 if (!pendingReward || !currentUser || !currentScan) return;
 
                 const newRecord: RecycleRecord = {

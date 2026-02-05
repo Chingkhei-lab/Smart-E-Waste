@@ -31,12 +31,9 @@ const DEVICE_KEYWORDS: Record<string, DeviceType> = {
 };
 
 export class AIClassifier {
-    private initialized = false;
-
     async initialize(): Promise<void> {
         // In production, load TensorFlow.js MobileNet here
         // For demo, we use rule-based only
-        this.initialized = true;
         console.log('AIClassifier initialized (demo mode)');
     }
 

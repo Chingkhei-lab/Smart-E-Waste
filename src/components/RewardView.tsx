@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEwasteStore } from '@/store/ewasteStore';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Card, CardContent } from '@/components/ui/card';
+
 
 // Mock Bin Simulator Component
 const BinSimulator = ({ code, onVerify, onClose }: { code: string, onVerify: () => void, onClose: () => void }) => {
@@ -136,7 +136,7 @@ const BinSimulator = ({ code, onVerify, onClose }: { code: string, onVerify: () 
 };
 
 export default function RewardView() {
-    const { pendingReward, currentScan, completeSession, currentUser } = useEwasteStore();
+    const { pendingReward, currentScan, completeSession } = useEwasteStore();
     const navigate = useNavigate();
     const [step, setStep] = useState<'instruction' | 'simulator' | 'success'>('instruction');
     const [depositCode] = useState(() => Math.floor(100000 + Math.random() * 900000).toString());
