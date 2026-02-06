@@ -32,7 +32,7 @@ const navItems: NavItem[] = [
 ];
 
 // User Layout with bottom navigation
-const UserLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const UserLayout: React.FC<{ children: React.ReactNode; hideHeader?: boolean }> = ({ children, hideHeader = false }) => {
     const { currentUser } = useEwasteStore();
     const location = useLocation();
 
@@ -45,28 +45,29 @@ const UserLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
             {/* Header */}
-            <header className="flex-none bg-white border-b z-40">
-                <div className="flex items-center justify-between px-4 py-3">
-                    <Link to="/" className="flex items-center gap-2">
-                        <div className="h-8 w-8 rounded-lg bg-emerald-500 flex items-center justify-center">
-                            <Leaf className="h-5 w-5 text-white" />
-                        </div>
-                        <span className="font-bold text-lg text-gray-900">EcoBin</span>
-                    </Link>
-
-                    <div className="flex items-center gap-3">
-                        <div className="text-right hidden sm:block">
-                            <p className="text-sm font-medium text-gray-900">{currentUser?.name}</p>
-                            <p className="text-xs text-gray-500">{currentUser?.points} pts</p>
-                        </div>
-                        <Link to="/profile">
-                            <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                                <User className="h-5 w-5 text-emerald-600" />
+            {!hideHeader && (
+                <header className="flex-none bg-white border-b z-40">
+                    <div className="flex items-center justify-between px-4 py-3">
+                        <Link to="/" className="flex items-center gap-2">
+                            <div className="h-8 w-8 rounded-lg bg-emerald-500 flex items-center justify-center">
+                                <Leaf className="h-5 w-5 text-white" />
                             </div>
+                            <span className="font-bold text-lg text-gray-900">EcoBin</span>
                         </Link>
+
+                        <div className="flex items-center gap-3">
+                            <div className="text-right hidden sm:block">
+                                <p className="text-sm font-medium text-gray-900">{currentUser?.name}</p>
+                                <p className="text-xs text-gray-500">{currentUser?.points} pts</p>
+                            </div>
+                            <Link to="/profile">
+                                <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
+                                    <User className="h-5 w-5 text-emerald-600" />
+                                </div>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-            </header>
+                </header>
 
             {/* Main Content - Only scrollable area */}
             <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 lg:p-6 flex flex-col w-full max-w-full">
