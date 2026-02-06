@@ -1,3 +1,4 @@
+website: https://smart-e-waste.vercel.app/
 # Smart E-Waste Recycling App (EcoBin)
 
 A gamified, AI-powered mobile web application designed to revolutionize how we recycle electronic waste. By combining object recognition, location services, and gamification, we make e-waste recycling engaging, rewarding, and impactful.
