@@ -69,6 +69,7 @@ const UserLayout: React.FC<{ children: React.ReactNode; hideHeader?: boolean }> 
                     </div>
                 </header>
 
+            )}
             {/* Main Content - Only scrollable area */}
             <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 lg:p-6 flex flex-col w-full max-w-full">
                 <div className="max-w-4xl mx-auto w-full flex-1 flex flex-col">
