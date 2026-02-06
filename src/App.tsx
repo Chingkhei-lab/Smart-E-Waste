@@ -693,7 +693,9 @@ function App() {
                     path="/impact"
                     element={
                         <ProtectedRoute>
-                            <ImpactDashboard />
+                            <UserLayout hideHeader={true}>
+                                <ImpactDashboard />
+                            </UserLayout>
                         </ProtectedRoute>
                     }
                 />
@@ -701,7 +703,9 @@ function App() {
                     path="/leaderboard"
                     element={
                         <ProtectedRoute>
-                            <LeaderboardView />
+                            <UserLayout hideHeader={true}>
+                                <LeaderboardView />
+                            </UserLayout>
                         </ProtectedRoute>
                     }
                 />
