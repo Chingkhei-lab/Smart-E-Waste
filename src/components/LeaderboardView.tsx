@@ -267,13 +267,13 @@ export default function LeaderboardView() {
                             <div className={cn("h-16 w-16 rounded-full bg-gradient-to-br flex items-center justify-center shadow-lg mb-2", getRankColor(2))}>
                                 <Medal className="h-8 w-8 text-white" />
                             </div>
-                            <p className="text-xs font-semibold text-gray-900 text-center truncate w-full">{top3[1].userName.split(' ')[0]}</p>
+                            <p className="text-xs font-semibold text-gray-900 text-center truncate w-full px-1">{top3[1].userName}</p>
                             <p className="text-lg font-bold text-gray-900">{top3[1].points}</p>
                             <Badge variant="outline" className="text-xs bg-gray-100 border-gray-200 mt-1">
                                 #2
                             </Badge>
                             {period === 'weekly' && (
-                                <Badge className="text-xs bg-gray-300 text-gray-900 mt-1 font-bold">
+                                <Badge className="text-xs bg-gray-300 text-gray-900 mt-1 font-bold whitespace-nowrap">
                                     +500 pts
                                 </Badge>
                             )}
@@ -287,13 +287,13 @@ export default function LeaderboardView() {
                             <div className={cn("h-20 w-20 rounded-full bg-gradient-to-br flex items-center justify-center shadow-xl mb-2", getRankColor(1))}>
                                 <Trophy className="h-10 w-10 text-white" />
                             </div>
-                            <p className="text-sm font-bold text-gray-900 text-center truncate w-full">{top3[0].userName.split(' ')[0]}</p>
+                            <p className="text-sm font-bold text-gray-900 text-center truncate w-full px-1">{top3[0].userName}</p>
                             <p className="text-xl font-bold text-yellow-600">{top3[0].points}</p>
                             <Badge className="text-xs bg-yellow-500 text-white mt-1">
                                 #1
                             </Badge>
                             {period === 'weekly' && (
-                                <Badge className="text-xs bg-yellow-400 text-yellow-900 mt-1 font-bold">
+                                <Badge className="text-xs bg-yellow-400 text-yellow-900 mt-1 font-bold whitespace-nowrap">
                                     +750 pts
                                 </Badge>
                             )}
@@ -306,13 +306,13 @@ export default function LeaderboardView() {
                             <div className={cn("h-16 w-16 rounded-full bg-gradient-to-br flex items-center justify-center shadow-lg mb-2", getRankColor(3))}>
                                 <Medal className="h-8 w-8 text-white" />
                             </div>
-                            <p className="text-xs font-semibold text-gray-900 text-center truncate w-full">{top3[2].userName.split(' ')[0]}</p>
+                            <p className="text-xs font-semibold text-gray-900 text-center truncate w-full px-1">{top3[2].userName}</p>
                             <p className="text-lg font-bold text-gray-900">{top3[2].points}</p>
                             <Badge variant="outline" className="text-xs bg-amber-50 border-amber-200 text-amber-700 mt-1">
                                 #3
                             </Badge>
                             {period === 'weekly' && (
-                                <Badge className="text-xs bg-amber-400 text-amber-900 mt-1 font-bold">
+                                <Badge className="text-xs bg-amber-400 text-amber-900 mt-1 font-bold whitespace-nowrap">
                                     +300 pts
                                 </Badge>
                             )}

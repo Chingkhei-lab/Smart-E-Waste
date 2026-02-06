@@ -69,8 +69,8 @@ const UserLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </header>
 
             {/* Main Content - Only scrollable area */}
-            <main className="flex-1 overflow-y-auto p-4 lg:p-6 flex flex-col">
-                <div className="max-w-4xl mx-auto w-full flex-1">
+            <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 lg:p-6 flex flex-col w-full max-w-full">
+                <div className="max-w-4xl mx-auto w-full flex-1 flex flex-col">
                     {children}
                 </div>
             </main>
@@ -367,9 +367,9 @@ const WaysToEarn = ({ navigate }: { navigate: (path: string) => void }) => {
                                 <div className={`h-10 w-10 rounded-full flex items-center justify-center ${option.bg}`}>
                                     <Icon className={`h-5 w-5 ${option.color}`} />
                                 </div>
-                                <div>
-                                    <p className="font-semibold text-gray-900">{option.title}</p>
-                                    <p className="text-xs text-gray-500">{option.subtitle}</p>
+                                <div className="min-w-0 flex-1">
+                                    <p className="font-semibold text-gray-900 truncate">{option.title}</p>
+                                    <p className="text-xs text-gray-500 truncate">{option.subtitle}</p>
                                 </div>
                             </div>
                             <div className="flex items-center text-emerald-600 font-bold text-sm">

@@ -508,9 +508,9 @@ export default function BinsMap() {
                         >
                             {!isNavigating && (
                                 <Popup>
-                                    <div className="min-w-[200px]">
-                                        <h3 className="font-semibold text-gray-900">{bin.name}</h3>
-                                        <p className="text-sm text-gray-500">{bin.address}</p>
+                                    <div className="min-w-0 flex-1">
+                                        <h3 className="font-semibold text-gray-900 truncate">{bin.name}</h3>
+                                        <p className="text-sm text-gray-500 truncate">{bin.address}</p>
                                         <div className="flex items-center gap-2 mt-2">
                                             <div className="h-2 flex-1 bg-gray-200 rounded-full overflow-hidden">
                                                 <div
@@ -670,8 +670,8 @@ export default function BinsMap() {
 
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-start justify-between gap-2">
-                                            <div>
-                                                <h3 className="font-semibold text-gray-900">{bin.name}</h3>
+                                            <div className="min-w-0 flex-1">
+                                                <h3 className="font-semibold text-gray-900 truncate">{bin.name}</h3>
                                                 <p className="text-sm text-gray-500 truncate">{bin.address}</p>
                                             </div>
                                             <Badge variant={bin.status === 'full' ? 'destructive' : 'secondary'}>

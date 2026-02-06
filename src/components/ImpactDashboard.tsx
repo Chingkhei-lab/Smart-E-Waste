@@ -117,21 +117,21 @@ export default function ImpactDashboard() {
                             <TreePine className="h-5 w-5 text-emerald-600" />
                             Environmental Equivalents
                         </h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <div className="text-center p-3 bg-green-50 rounded-xl">
-                                <TreePine className="h-6 w-6 text-green-600 mx-auto mb-1" />
-                                <p className="text-2xl font-bold text-green-900">{treesEquivalent}</p>
-                                <p className="text-xs text-green-700">Trees Planted</p>
+                        <div className="grid grid-cols-1 xs:grid-cols-2 shadow-sm sm:grid-cols-3 gap-3">
+                            <div className="text-center p-3 bg-green-50 rounded-xl min-w-0">
+                                <TreePine className="h-6 w-6 text-green-600 mx-auto mb-1 shrink-0" />
+                                <p className="text-2xl font-bold text-green-900 truncate">{treesEquivalent}</p>
+                                <p className="text-xs text-green-700 truncate">Trees Planted</p>
                             </div>
-                            <div className="text-center p-3 bg-blue-50 rounded-xl">
-                                <Droplet className="h-6 w-6 text-blue-600 mx-auto mb-1" />
-                                <p className="text-2xl font-bold text-blue-900">{waterSaved}L</p>
-                                <p className="text-xs text-blue-700">Water Saved</p>
+                            <div className="text-center p-3 bg-blue-50 rounded-xl min-w-0">
+                                <Droplet className="h-6 w-6 text-blue-600 mx-auto mb-1 shrink-0" />
+                                <p className="text-2xl font-bold text-blue-900 truncate">{waterSaved}L</p>
+                                <p className="text-xs text-blue-700 truncate">Water Saved</p>
                             </div>
-                            <div className="text-center p-3 bg-amber-50 rounded-xl">
-                                <Zap className="h-6 w-6 text-amber-600 mx-auto mb-1" />
-                                <p className="text-2xl font-bold text-amber-900">{energySaved}</p>
-                                <p className="text-xs text-amber-700">kWh Saved</p>
+                            <div className="text-center p-3 bg-amber-50 rounded-xl min-w-0">
+                                <Zap className="h-6 w-6 text-amber-600 mx-auto mb-1 shrink-0" />
+                                <p className="text-2xl font-bold text-amber-900 truncate">{energySaved}</p>
+                                <p className="text-xs text-amber-700 truncate">kWh Saved</p>
                             </div>
                         </div>
                     </CardContent>
